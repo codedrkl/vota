@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group(['prefix' => 'users'], function() {
+    Route::get('/', function() {
+        return 'Hi';
+    });
+
+    Route::post('/signup', function() {
+       return 'Hi';
+    });
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/example', function() {
+    return view('dashboard');
+});
