@@ -29,6 +29,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/example', function() {
-    return view('dashboard');
-});
+Route::get('/election', 'ElectionController@index');
+
+Route::post('/election', 'ElectionController@store');

@@ -1,33 +1,4 @@
-@extends('layouts.dashboard');
-
-@section('menu')
-	<ul class="nav">
-		<li class="active">
-			<a href="#">
-				<i class="material-icons">dashboard</i>
-				<p>Dashboard</p>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<i class="material-icons">person</i>
-				<p>Elections</p>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<i class="material-icons">content_paste</i>
-				<p>Voters</p>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<i class="material-icons">library_books</i>
-				<p>Settings</p>
-			</a>
-		</li>
-	</ul>
-@endsection
+@extends('layouts.dashboard')
 
 @section('content')
 	<div class="main-panel">

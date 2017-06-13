@@ -36,7 +36,7 @@
             </div>
 
             <div class="sidebar-wrapper">
-                @yield('menu')
+                @include('includes.menu')
             </div>
         </div>
         @yield('content')
