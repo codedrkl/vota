@@ -8,8 +8,8 @@
 
         <div class="content">
             <div class="container-fluid">
-                @include('includes.create-election')
-                @include('includes.view-election')
+                @include('includes.create-candidate')
+                @include('includes.view-candidate')
             </div>
         </div>
     </div>

@@ -11,7 +11,7 @@ class ElectionController extends Controller
 {
     public function index() {
         $elections = Election::where('creator', Auth::id())->get();
-        return view('election', compact($elections));
+        return view('election', ['elections' => $elections]);
     }
 
     public function store(Request $request) {

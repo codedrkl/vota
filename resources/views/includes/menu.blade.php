@@ -12,6 +12,12 @@
         </a>
     </li>
     <li>
+        <a href="candidate">
+            <i class="material-icons">person</i>
+            <p>Candidates</p>
+        </a>
+    </li>
+    <li>
         <a href="#">
             <i class="material-icons">content_paste</i>
             <p>Voters</p>
