@@ -29,6 +29,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/election/{id}', 'ElectionController@show');
+
 Route::get('/election', 'ElectionController@index');
 
 Route::post('/election', 'ElectionController@store');
@@ -36,3 +38,5 @@ Route::post('/election', 'ElectionController@store');
 Route::get('/candidate', 'CandidateController@index');
 
 Route::post('/candidate', 'CandidateController@store');
+
+Route::post('/post', 'PostController@store');

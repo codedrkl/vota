@@ -10,7 +10,7 @@ class CandidateController extends Controller
 {
     //
     public function index() {
-        return view('candidate');
+        return view('candidate', ['candidates' => Candidate::all()]);
     }
 
     public function store(Request $request) {

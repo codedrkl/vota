@@ -34,7 +34,7 @@
                                     <td class="text-success"><a href="#">View</a></td>
                                 @endif
                                 <td>
-                                    <a href={{"/election/".$eachElection->id}} class="btn btn-primary btn-round">Prepare</a>
+                                    <a href={{"/election/".$eachElection->id}} class="btn btn-primary">Prepare</a>
                                 </td>
                             </tr>
                         @endforeach

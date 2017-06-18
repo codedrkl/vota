@@ -9,16 +9,21 @@
                 <table class="table">
                     <thead class="text-primary">
                         <th>Name</th>
-                        <th>Name</th>
-                        <th>Intro</th>
-
+                        <th>Email</th>
+                        <th>Nickname</th>
+                        <th width="40%">Profile</th>
+                        <th>Edit</th>
                     </thead>
                     <tbody>
-                        {{--@foreach($candidates as $aCandidate)--}}
-                            {{--<tr>--}}
-                                {{----}}
-                            {{--</tr>--}}
-                        {{--@endforeach--}}
+                        @foreach($candidates as $aCandidate)
+                            <tr>
+                                <td>{{ $aCandidate->name }}</td>
+                                <td>{{ $aCandidate->email }}</td>
+                                <td>{{ $aCandidate->nickname }}</td>
+                                <td>{{ $aCandidate->profile }}</td>
+                                <td><a class="btn btn-primary" href="#">Edit</a> </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
