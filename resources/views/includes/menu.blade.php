@@ -6,13 +6,13 @@
         </a>
     </li>
     <li>
-        <a href="election">
+        <a href="/election">
             <i class="material-icons">person</i>
             <p>Elections</p>
         </a>
     </li>
     <li>
-        <a href="candidate">
+        <a href="/candidate">
             <i class="material-icons">person</i>
             <p>Candidates</p>
         </a>

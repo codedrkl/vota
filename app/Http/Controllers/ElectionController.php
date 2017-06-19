@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 use App\Election;
+use App\Candidate;
+use App\Post;
 
 class ElectionController extends Controller
 {
@@ -24,7 +26,12 @@ class ElectionController extends Controller
 
     public function show($id) {
         $electionInfo = Election::where('id', $id)->get();
-        $posts = DB::table('posts')->where('election_id', $id)->get();
-        return view('election-detail', ['election' => $electionInfo[0], 'posts' => $posts]);
+        $candidates = Candidate::all();
+        $posts = Post::where('election_id', $id)->get();
+        return view('election-detail', [
+            'election' => $electionInfo[0],
+            'posts' => $posts,
+            'candidates' => $candidates
+        ]);
     }
 }

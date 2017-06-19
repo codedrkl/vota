@@ -9,13 +9,14 @@
                 @if(count($posts) == 0)
                     <p>There are currently no posts</p>
                 @else
-                    <table class="table">
+                    <table class="table posts">
                         <thead>
                             <tr>
                                 <th>S/N</th>
                                 <th>Name</th>
                                 <th>Responsibility</th>
                                 <th>Candidates</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         @foreach($posts as $eachPost)
@@ -24,15 +25,24 @@
                                 <td>{{ $eachPost->name }}</td>
                                 <td>{{ $eachPost->responsibility }}</td>
                                 <td></td>
+                                <td><a class="btn btn-primary btn-small btn-round actions add-candidate" post="{{ $eachPost->id }}" data-toggle="modal" data-target="#candidate-modal" title="Add candidates">Add</a></td>
                             </tr>
                         @endforeach
                     </table>
                 @endif
             </div>
 
-            <a type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#postModal">
+            <a class="btn btn-primary btn-round" data-toggle="modal" data-target="#post-modal">
                 Create Post
             </a>
         </div>
     </div>
 </div>
+<style type="text/css">
+    .actions {
+        display: none;
+    }
+    .posts tr:hover .actions {
+        display: block;
+    }
+</style>

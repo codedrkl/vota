@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Candidate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
+use App\Candidate;
+use App\CandidatePost;
 
 class CandidateController extends Controller
 {
@@ -18,5 +20,14 @@ class CandidateController extends Controller
         $formData['creator'] = Auth::id();
         Candidate::create($formData);
         return redirect('/candidate');
+    }
+
+    /**
+     * function add is used to candidates for a post
+     * @param Request $request
+     */
+    public function add(Request $request) {
+        CandidatePost::create(request(['post_id', 'candidate_id', 'manifesto']));
+        return redirect('/election/'.$request['election_id']);
     }
 }

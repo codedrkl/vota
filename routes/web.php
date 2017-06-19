@@ -40,3 +40,5 @@ Route::get('/candidate', 'CandidateController@index');
 Route::post('/candidate', 'CandidateController@store');
 
 Route::post('/post', 'PostController@store');
+
+Route::post('/addcandidate', 'CandidateController@add');
